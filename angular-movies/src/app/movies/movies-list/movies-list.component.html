@@ -2,6 +2,7 @@
 <div *ngIf= "movies?.length === 0">
     There is no record to display
 </div>
+<ng-container *ngIf ="movies && movies.length >0">
 <div *ngFor= "let movie of movies; let index= index" class="movie-container">
     <div>
         <h2>{{ index }}) {{ movie.title | lowercase }}</h2> 
@@ -16,3 +17,4 @@
         {{ movie.price | currency }}
       </div>
 </div>
+</ng-container>
