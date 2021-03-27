@@ -4,7 +4,10 @@
 </div>
 <div *ngFor= "let movie of movies; let index= index" class="movie-container">
     <div>
-        <h2>{{ index }}) {{ movie.title | lowercase }}</h2>        
+        <h2>{{ index }}) {{ movie.title | lowercase }}</h2> 
+        <button style="margin-left: 1rem" (click)="remove(index)">
+            Remove
+          </button>       
       </div>
       <div>
         {{ movie.releaseDate | date: "dd-MMMM-yyyy" | uppercase }}
